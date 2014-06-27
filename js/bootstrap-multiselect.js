@@ -746,6 +746,12 @@
 
                 var $option = this.getOptionByValue(value);
                 var $checkbox = this.getInputByValue(value);
+                if ( typeof $option   === 'undefined' ||
+                     typeof $checkbox === 'undefined' ){
+                   continue;
+                }
+
+
 
                 if (this.options.selectedClass) {
                     $checkbox.parents('li')
@@ -785,6 +791,10 @@
 
                 var $option = this.getOptionByValue(value);
                 var $checkbox = this.getInputByValue(value);
+                if ( typeof $option   === 'undefined' ||
+                     typeof $checkbox === 'undefined' ){
+                   continue;
+                }
 
                 if (this.options.selectedClass) {
                     $checkbox.parents('li')
